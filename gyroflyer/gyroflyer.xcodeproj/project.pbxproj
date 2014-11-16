@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E222CA019CC69C700D92269 /* EnemyShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E222C9F19CC69C700D92269 /* EnemyShip.m */; };
+		5E23F8B619C8872700D5FE83 /* Asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E23F8B419C8872700D5FE83 /* Asteroid.png */; };
+		5E23F8B719C8872700D5FE83 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E23F8B519C8872700D5FE83 /* Spaceship.png */; };
+		5E5E6B5919C8851700E1DDC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5819C8851700E1DDC5 /* Foundation.framework */; };
+		5E5E6B5B19C8851700E1DDC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5A19C8851700E1DDC5 /* CoreGraphics.framework */; };
+		5E5E6B5D19C8851700E1DDC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5C19C8851700E1DDC5 /* UIKit.framework */; };
+		5E5E6B5F19C8851700E1DDC5 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5E19C8851700E1DDC5 /* SpriteKit.framework */; };
+		5E5E6B6519C8851700E1DDC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E6B6319C8851700E1DDC5 /* InfoPlist.strings */; };
+		5E5E6B6719C8851700E1DDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B6619C8851700E1DDC5 /* main.m */; };
+		5E5E6B6B19C8851700E1DDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B6A19C8851700E1DDC5 /* AppDelegate.m */; };
+		5E5E6B6E19C8851700E1DDC5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E6B6C19C8851700E1DDC5 /* Main_iPhone.storyboard */; };
+		5E5E6B7119C8851700E1DDC5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E6B6F19C8851700E1DDC5 /* Main_iPad.storyboard */; };
+		5E5E6B7419C8851700E1DDC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B7319C8851700E1DDC5 /* ViewController.m */; };
+		5E5E6B7719C8851700E1DDC5 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B7619C8851700E1DDC5 /* GameScene.m */; };
+		5E5E6B7B19C8851700E1DDC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E6B7A19C8851700E1DDC5 /* Images.xcassets */; };
+		5E5E6B8219C8851700E1DDC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B8119C8851700E1DDC5 /* XCTest.framework */; };
+		5E5E6B8319C8851700E1DDC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5819C8851700E1DDC5 /* Foundation.framework */; };
+		5E5E6B8419C8851700E1DDC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5E6B5C19C8851700E1DDC5 /* UIKit.framework */; };
+		5E5E6B8C19C8851700E1DDC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E6B8A19C8851700E1DDC5 /* InfoPlist.strings */; };
+		5E5E6B8E19C8851700E1DDC5 /* gyroflyerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B8D19C8851700E1DDC5 /* gyroflyerTests.m */; };
+		5E5E6B9A19C885B500E1DDC5 /* Collidable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B9919C885B500E1DDC5 /* Collidable.m */; };
+		5E5E6B9D19C885EB00E1DDC5 /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B9C19C885EB00E1DDC5 /* Spaceship.m */; };
+		5E5E6BA019C8864F00E1DDC5 /* Asteroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E6B9F19C8864F00E1DDC5 /* Asteroid.m */; };
+		5E84583619CD2DD6008EA8B5 /* StandardBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E84583519CD2DD6008EA8B5 /* StandardBullet.png */; };
+		5E863AA019D45D14008432DF /* PickupDualBullets.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E863A9F19D45D14008432DF /* PickupDualBullets.png */; };
+		5E863AA219D45D2D008432DF /* PickupHealth.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E863AA119D45D2D008432DF /* PickupHealth.png */; };
+		5E863AA419D45D40008432DF /* PickupOneShotKill.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E863AA319D45D40008432DF /* PickupOneShotKill.png */; };
+		5EA2BEF419CD33200047DFE4 /* EnemyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2BEF319CD33200047DFE4 /* EnemyShip.png */; };
+		5EA6E0F019D2FA1C004DDB6B /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6E0EF19D2FA1C004DDB6B /* TitleScene.m */; };
+		5EADE0DF19CD290B00B03846 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE0DE19CD290B00B03846 /* Bullet.m */; };
+		5EAFCA3219D42D060033E118 /* EnemyHardBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFCA3119D42D060033E118 /* EnemyHardBullet.png */; };
+		5EAFCA3419D42D0D0033E118 /* EnemyEasyBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFCA3319D42D0D0033E118 /* EnemyEasyBullet.png */; };
+		5EAFCA3619D42D180033E118 /* EnemyImpossibleBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFCA3519D42D180033E118 /* EnemyImpossibleBullet.png */; };
+		5EBB59B719CD57BC006A7CA7 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB59B619CD57BC006A7CA7 /* Background.jpg */; };
+		5EBB59BB19CD5AF5006A7CA7 /* EnemyStandardBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB59BA19CD5AF5006A7CA7 /* EnemyStandardBullet.png */; };
+		6A17036819F4CB1E00427FB3 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17036519F4CB1E00427FB3 /* BLEDevice.m */; };
+		6A17036919F4CB1E00427FB3 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17036719F4CB1E00427FB3 /* BLEUtility.m */; };
+		6A6C00C419F5ECE300141BF6 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C00C119F5ECE300141BF6 /* DFBlunoDevice.m */; };
+		6A6C00C519F5ECE300141BF6 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C00C319F5ECE300141BF6 /* DFBlunoManager.m */; };
+		9668AF0519D4209F00E134C3 /* Pickup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9668AF0419D4209F00E134C3 /* Pickup.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E5E6B8519C8851700E1DDC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E5E6B4D19C8851700E1DDC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E5E6B5419C8851700E1DDC5;
+			remoteInfo = gyroflyer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E222C9E19CC69C700D92269 /* EnemyShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyShip.h; sourceTree = "<group>"; };
+		5E222C9F19CC69C700D92269 /* EnemyShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyShip.m; sourceTree = "<group>"; };
+		5E23F8B419C8872700D5FE83 /* Asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Asteroid.png; sourceTree = "<group>"; };
+		5E23F8B519C8872700D5FE83 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		5E5E6B5519C8851700E1DDC5 /* gyroflyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gyroflyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E5E6B5819C8851700E1DDC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5E5E6B5A19C8851700E1DDC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5E5E6B5C19C8851700E1DDC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5E5E6B5E19C8851700E1DDC5 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		5E5E6B6219C8851700E1DDC5 /* gyroflyer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gyroflyer-Info.plist"; sourceTree = "<group>"; };
+		5E5E6B6419C8851700E1DDC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E5E6B6619C8851700E1DDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E5E6B6819C8851700E1DDC5 /* gyroflyer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gyroflyer-Prefix.pch"; sourceTree = "<group>"; };
+		5E5E6B6919C8851700E1DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5E5E6B6A19C8851700E1DDC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5E5E6B6D19C8851700E1DDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5E5E6B7019C8851700E1DDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5E5E6B7219C8851700E1DDC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5E5E6B7319C8851700E1DDC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5E5E6B7519C8851700E1DDC5 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		5E5E6B7619C8851700E1DDC5 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		5E5E6B7A19C8851700E1DDC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E5E6B8019C8851700E1DDC5 /* gyroflyerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gyroflyerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E5E6B8119C8851700E1DDC5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5E5E6B8919C8851700E1DDC5 /* gyroflyerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gyroflyerTests-Info.plist"; sourceTree = "<group>"; };
+		5E5E6B8B19C8851700E1DDC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E5E6B8D19C8851700E1DDC5 /* gyroflyerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gyroflyerTests.m; sourceTree = "<group>"; };
+		5E5E6B9819C885B500E1DDC5 /* Collidable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collidable.h; sourceTree = "<group>"; };
+		5E5E6B9919C885B500E1DDC5 /* Collidable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collidable.m; sourceTree = "<group>"; };
+		5E5E6B9B19C885EB00E1DDC5 /* Spaceship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
+		5E5E6B9C19C885EB00E1DDC5 /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
+		5E5E6B9E19C8864F00E1DDC5 /* Asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
+		5E5E6B9F19C8864F00E1DDC5 /* Asteroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asteroid.m; sourceTree = "<group>"; };
+		5E84583519CD2DD6008EA8B5 /* StandardBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StandardBullet.png; sourceTree = "<group>"; };
+		5E863A9F19D45D14008432DF /* PickupDualBullets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickupDualBullets.png; sourceTree = "<group>"; };
+		5E863AA119D45D2D008432DF /* PickupHealth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickupHealth.png; sourceTree = "<group>"; };
+		5E863AA319D45D40008432DF /* PickupOneShotKill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickupOneShotKill.png; sourceTree = "<group>"; };
+		5EA2BEF319CD33200047DFE4 /* EnemyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyShip.png; sourceTree = "<group>"; };
+		5EA6E0EE19D2FA1C004DDB6B /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		5EA6E0EF19D2FA1C004DDB6B /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		5EADE0DD19CD290B00B03846 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		5EADE0DE19CD290B00B03846 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		5EAFCA3119D42D060033E118 /* EnemyHardBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyHardBullet.png; sourceTree = "<group>"; };
+		5EAFCA3319D42D0D0033E118 /* EnemyEasyBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyEasyBullet.png; sourceTree = "<group>"; };
+		5EAFCA3519D42D180033E118 /* EnemyImpossibleBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyImpossibleBullet.png; sourceTree = "<group>"; };
+		5EBB59B619CD57BC006A7CA7 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
+		5EBB59BA19CD5AF5006A7CA7 /* EnemyStandardBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyStandardBullet.png; sourceTree = "<group>"; };
+		6A17036419F4CB1E00427FB3 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
+		6A17036519F4CB1E00427FB3 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
+		6A17036619F4CB1E00427FB3 /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUtility.h; sourceTree = "<group>"; };
+		6A17036719F4CB1E00427FB3 /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUtility.m; sourceTree = "<group>"; };
+		6A6C00C019F5ECE300141BF6 /* DFBlunoDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBlunoDevice.h; sourceTree = "<group>"; };
+		6A6C00C119F5ECE300141BF6 /* DFBlunoDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoDevice.m; sourceTree = "<group>"; };
+		6A6C00C219F5ECE300141BF6 /* DFBlunoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBlunoManager.h; sourceTree = "<group>"; };
+		6A6C00C319F5ECE300141BF6 /* DFBlunoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoManager.m; sourceTree = "<group>"; };
+		9668AF0319D4209F00E134C3 /* Pickup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pickup.h; sourceTree = "<group>"; };
+		9668AF0419D4209F00E134C3 /* Pickup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pickup.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E5E6B5219C8851700E1DDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E5E6B5B19C8851700E1DDC5 /* CoreGraphics.framework in Frameworks */,
+				5E5E6B5D19C8851700E1DDC5 /* UIKit.framework in Frameworks */,
+				5E5E6B5F19C8851700E1DDC5 /* SpriteKit.framework in Frameworks */,
+				5E5E6B5919C8851700E1DDC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E5E6B7D19C8851700E1DDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E5E6B8219C8851700E1DDC5 /* XCTest.framework in Frameworks */,
+				5E5E6B8419C8851700E1DDC5 /* UIKit.framework in Frameworks */,
+				5E5E6B8319C8851700E1DDC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E5E6B4C19C8851700E1DDC5 = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B6019C8851700E1DDC5 /* gyroflyer */,
+				5E5E6B8719C8851700E1DDC5 /* gyroflyerTests */,
+				5E5E6B5719C8851700E1DDC5 /* Frameworks */,
+				5E5E6B5619C8851700E1DDC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E5E6B5619C8851700E1DDC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B5519C8851700E1DDC5 /* gyroflyer.app */,
+				5E5E6B8019C8851700E1DDC5 /* gyroflyerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E5E6B5719C8851700E1DDC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B5819C8851700E1DDC5 /* Foundation.framework */,
+				5E5E6B5A19C8851700E1DDC5 /* CoreGraphics.framework */,
+				5E5E6B5C19C8851700E1DDC5 /* UIKit.framework */,
+				5E5E6B5E19C8851700E1DDC5 /* SpriteKit.framework */,
+				5E5E6B8119C8851700E1DDC5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E5E6B6019C8851700E1DDC5 /* gyroflyer */ = {
+			isa = PBXGroup;
+			children = (
+				6A17036219F4CB1200427FB3 /* DFBluno */,
+				5E5E6B6919C8851700E1DDC5 /* AppDelegate.h */,
+				5E5E6B6A19C8851700E1DDC5 /* AppDelegate.m */,
+				5E5E6B6C19C8851700E1DDC5 /* Main_iPhone.storyboard */,
+				5E5E6B6F19C8851700E1DDC5 /* Main_iPad.storyboard */,
+				5E5E6B7219C8851700E1DDC5 /* ViewController.h */,
+				5E5E6B7319C8851700E1DDC5 /* ViewController.m */,
+				5EA6E0EE19D2FA1C004DDB6B /* TitleScene.h */,
+				5EA6E0EF19D2FA1C004DDB6B /* TitleScene.m */,
+				5E5E6B7519C8851700E1DDC5 /* GameScene.h */,
+				5E5E6B7619C8851700E1DDC5 /* GameScene.m */,
+				5E5E6B9719C8858500E1DDC5 /* Sprites */,
+				5E5E6B6119C8851700E1DDC5 /* Supporting Files */,
+			);
+			path = gyroflyer;
+			sourceTree = "<group>";
+		};
+		5E5E6B6119C8851700E1DDC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E863AA319D45D40008432DF /* PickupOneShotKill.png */,
+				5E863AA119D45D2D008432DF /* PickupHealth.png */,
+				5E863A9F19D45D14008432DF /* PickupDualBullets.png */,
+				5EAFCA3519D42D180033E118 /* EnemyImpossibleBullet.png */,
+				5EAFCA3319D42D0D0033E118 /* EnemyEasyBullet.png */,
+				5EAFCA3119D42D060033E118 /* EnemyHardBullet.png */,
+				5EBB59B619CD57BC006A7CA7 /* Background.jpg */,
+				5EBB59BA19CD5AF5006A7CA7 /* EnemyStandardBullet.png */,
+				5E84583519CD2DD6008EA8B5 /* StandardBullet.png */,
+				5E23F8B419C8872700D5FE83 /* Asteroid.png */,
+				5E23F8B519C8872700D5FE83 /* Spaceship.png */,
+				5EA2BEF319CD33200047DFE4 /* EnemyShip.png */,
+				5E5E6B7A19C8851700E1DDC5 /* Images.xcassets */,
+				5E5E6B6219C8851700E1DDC5 /* gyroflyer-Info.plist */,
+				5E5E6B6319C8851700E1DDC5 /* InfoPlist.strings */,
+				5E5E6B6619C8851700E1DDC5 /* main.m */,
+				5E5E6B6819C8851700E1DDC5 /* gyroflyer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E5E6B8719C8851700E1DDC5 /* gyroflyerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B8D19C8851700E1DDC5 /* gyroflyerTests.m */,
+				5E5E6B8819C8851700E1DDC5 /* Supporting Files */,
+			);
+			path = gyroflyerTests;
+			sourceTree = "<group>";
+		};
+		5E5E6B8819C8851700E1DDC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B8919C8851700E1DDC5 /* gyroflyerTests-Info.plist */,
+				5E5E6B8A19C8851700E1DDC5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E5E6B9719C8858500E1DDC5 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E6B9819C885B500E1DDC5 /* Collidable.h */,
+				5E5E6B9919C885B500E1DDC5 /* Collidable.m */,
+				9668AF0319D4209F00E134C3 /* Pickup.h */,
+				9668AF0419D4209F00E134C3 /* Pickup.m */,
+				5E5E6B9B19C885EB00E1DDC5 /* Spaceship.h */,
+				5E5E6B9C19C885EB00E1DDC5 /* Spaceship.m */,
+				5E222C9E19CC69C700D92269 /* EnemyShip.h */,
+				5E222C9F19CC69C700D92269 /* EnemyShip.m */,
+				5EADE0DD19CD290B00B03846 /* Bullet.h */,
+				5EADE0DE19CD290B00B03846 /* Bullet.m */,
+				5E5E6B9E19C8864F00E1DDC5 /* Asteroid.h */,
+				5E5E6B9F19C8864F00E1DDC5 /* Asteroid.m */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		6A17036219F4CB1200427FB3 /* DFBluno */ = {
+			isa = PBXGroup;
+			children = (
+				6A6C00C019F5ECE300141BF6 /* DFBlunoDevice.h */,
+				6A6C00C119F5ECE300141BF6 /* DFBlunoDevice.m */,
+				6A6C00C219F5ECE300141BF6 /* DFBlunoManager.h */,
+				6A6C00C319F5ECE300141BF6 /* DFBlunoManager.m */,
+				6A17036319F4CB1E00427FB3 /* Core */,
+			);
+			name = DFBluno;
+			sourceTree = "<group>";
+		};
+		6A17036319F4CB1E00427FB3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6A17036419F4CB1E00427FB3 /* BLEDevice.h */,
+				6A17036519F4CB1E00427FB3 /* BLEDevice.m */,
+				6A17036619F4CB1E00427FB3 /* BLEUtility.h */,
+				6A17036719F4CB1E00427FB3 /* BLEUtility.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E5E6B5419C8851700E1DDC5 /* gyroflyer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E5E6B9119C8851700E1DDC5 /* Build configuration list for PBXNativeTarget "gyroflyer" */;
+			buildPhases = (
+				5E5E6B5119C8851700E1DDC5 /* Sources */,
+				5E5E6B5219C8851700E1DDC5 /* Frameworks */,
+				5E5E6B5319C8851700E1DDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gyroflyer;
+			productName = gyroflyer;
+			productReference = 5E5E6B5519C8851700E1DDC5 /* gyroflyer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E5E6B7F19C8851700E1DDC5 /* gyroflyerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E5E6B9419C8851700E1DDC5 /* Build configuration list for PBXNativeTarget "gyroflyerTests" */;
+			buildPhases = (
+				5E5E6B7C19C8851700E1DDC5 /* Sources */,
+				5E5E6B7D19C8851700E1DDC5 /* Frameworks */,
+				5E5E6B7E19C8851700E1DDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E5E6B8619C8851700E1DDC5 /* PBXTargetDependency */,
+			);
+			name = gyroflyerTests;
+			productName = gyroflyerTests;
+			productReference = 5E5E6B8019C8851700E1DDC5 /* gyroflyerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E5E6B4D19C8851700E1DDC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = HamLann;
+				TargetAttributes = {
+					5E5E6B5419C8851700E1DDC5 = {
+						DevelopmentTeam = Q246687645;
+					};
+					5E5E6B7F19C8851700E1DDC5 = {
+						TestTargetID = 5E5E6B5419C8851700E1DDC5;
+					};
+				};
+			};
+			buildConfigurationList = 5E5E6B5019C8851700E1DDC5 /* Build configuration list for PBXProject "gyroflyer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E5E6B4C19C8851700E1DDC5;
+			productRefGroup = 5E5E6B5619C8851700E1DDC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E5E6B5419C8851700E1DDC5 /* gyroflyer */,
+				5E5E6B7F19C8851700E1DDC5 /* gyroflyerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E5E6B5319C8851700E1DDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E863AA419D45D40008432DF /* PickupOneShotKill.png in Resources */,
+				5E5E6B7B19C8851700E1DDC5 /* Images.xcassets in Resources */,
+				5EAFCA3619D42D180033E118 /* EnemyImpossibleBullet.png in Resources */,
+				5EAFCA3219D42D060033E118 /* EnemyHardBullet.png in Resources */,
+				5E5E6B7119C8851700E1DDC5 /* Main_iPad.storyboard in Resources */,
+				5E863AA219D45D2D008432DF /* PickupHealth.png in Resources */,
+				5EA2BEF419CD33200047DFE4 /* EnemyShip.png in Resources */,
+				5E23F8B619C8872700D5FE83 /* Asteroid.png in Resources */,
+				5E5E6B6E19C8851700E1DDC5 /* Main_iPhone.storyboard in Resources */,
+				5EAFCA3419D42D0D0033E118 /* EnemyEasyBullet.png in Resources */,
+				5E23F8B719C8872700D5FE83 /* Spaceship.png in Resources */,
+				5E5E6B6519C8851700E1DDC5 /* InfoPlist.strings in Resources */,
+				5E84583619CD2DD6008EA8B5 /* StandardBullet.png in Resources */,
+				5E863AA019D45D14008432DF /* PickupDualBullets.png in Resources */,
+				5EBB59B719CD57BC006A7CA7 /* Background.jpg in Resources */,
+				5EBB59BB19CD5AF5006A7CA7 /* EnemyStandardBullet.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E5E6B7E19C8851700E1DDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E5E6B8C19C8851700E1DDC5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E5E6B5119C8851700E1DDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A17036919F4CB1E00427FB3 /* BLEUtility.m in Sources */,
+				5EA6E0F019D2FA1C004DDB6B /* TitleScene.m in Sources */,
+				6A17036819F4CB1E00427FB3 /* BLEDevice.m in Sources */,
+				5E222CA019CC69C700D92269 /* EnemyShip.m in Sources */,
+				5E5E6B9A19C885B500E1DDC5 /* Collidable.m in Sources */,
+				5E5E6BA019C8864F00E1DDC5 /* Asteroid.m in Sources */,
+				5E5E6B7719C8851700E1DDC5 /* GameScene.m in Sources */,
+				6A6C00C519F5ECE300141BF6 /* DFBlunoManager.m in Sources */,
+				5E5E6B9D19C885EB00E1DDC5 /* Spaceship.m in Sources */,
+				6A6C00C419F5ECE300141BF6 /* DFBlunoDevice.m in Sources */,
+				5EADE0DF19CD290B00B03846 /* Bullet.m in Sources */,
+				5E5E6B7419C8851700E1DDC5 /* ViewController.m in Sources */,
+				5E5E6B6B19C8851700E1DDC5 /* AppDelegate.m in Sources */,
+				5E5E6B6719C8851700E1DDC5 /* main.m in Sources */,
+				9668AF0519D4209F00E134C3 /* Pickup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E5E6B7C19C8851700E1DDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E5E6B8E19C8851700E1DDC5 /* gyroflyerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E5E6B8619C8851700E1DDC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E5E6B5419C8851700E1DDC5 /* gyroflyer */;
+			targetProxy = 5E5E6B8519C8851700E1DDC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E5E6B6319C8851700E1DDC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5E6B6419C8851700E1DDC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5E5E6B6C19C8851700E1DDC5 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5E6B6D19C8851700E1DDC5 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5E5E6B6F19C8851700E1DDC5 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5E6B7019C8851700E1DDC5 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5E5E6B8A19C8851700E1DDC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5E6B8B19C8851700E1DDC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E5E6B8F19C8851700E1DDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E5E6B9019C8851700E1DDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E5E6B9219C8851700E1DDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyroflyer/gyroflyer-Prefix.pch";
+				INFOPLIST_FILE = "gyroflyer/gyroflyer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5E5E6B9319C8851700E1DDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyroflyer/gyroflyer-Prefix.pch";
+				INFOPLIST_FILE = "gyroflyer/gyroflyer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5E5E6B9519C8851700E1DDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/gyroflyer.app/gyroflyer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyroflyer/gyroflyer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "gyroflyerTests/gyroflyerTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5E5E6B9619C8851700E1DDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/gyroflyer.app/gyroflyer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gyroflyer/gyroflyer-Prefix.pch";
+				INFOPLIST_FILE = "gyroflyerTests/gyroflyerTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E5E6B5019C8851700E1DDC5 /* Build configuration list for PBXProject "gyroflyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E5E6B8F19C8851700E1DDC5 /* Debug */,
+				5E5E6B9019C8851700E1DDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E5E6B9119C8851700E1DDC5 /* Build configuration list for PBXNativeTarget "gyroflyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E5E6B9219C8851700E1DDC5 /* Debug */,
+				5E5E6B9319C8851700E1DDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E5E6B9419C8851700E1DDC5 /* Build configuration list for PBXNativeTarget "gyroflyerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E5E6B9519C8851700E1DDC5 /* Debug */,
+				5E5E6B9619C8851700E1DDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E5E6B4D19C8851700E1DDC5 /* Project object */;
+}

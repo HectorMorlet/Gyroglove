@@ -1,0 +1,11 @@
+In short this is all that needs to be ordered:
+- One: MPU-6050 gyroscope and accelerometer, From: https://www.sparkfun.com/products/11028
+
+Full parts list:
+- Bluno (Provided by school)
+- Leads (Provided by school)
+- Button (Provided by school)
+- Small 7 volt battery (Provided by school)
+- One MPU-6050 gyroscope and accelerometer (Needs to be ordered)
+- Cool glove (Provided by students)
+

@@ -1,0 +1,48 @@
+----------
+Gyro Glove
+----------
+
+Arduino end
+-----------
+
+- All bluetooth communication functionality
+- Read
+-- Into the:
+--- Location of the data
+--- Size of the data
+-- Send the x,y,z back to the IOS device
+- Write
+-- Set the:
+--- Location of the data
+--- Size of the data
+TESTING: Same as here except without sending it over bluetooth
+
+IOS end
+-------
+
+General:
+- Receives x, y, z tilt
+- Converts x, y, z tilt into commands:
+-- Scaling
+--- e.g. (-45 <-> 45) + 45 / 90 to give decimal
+-- Ranges (levels)
+--- e.g. (-45 <-> -40 == level 0, -40 <-> -35 == level 1 etc)
+
+Display directions:
+- Take Scaling in decimal of each direction
+-- x:
+-- y:
+-- z:
+
+Color:
+- Set an rgb of a cgrect
+-- r-x
+-- g-y
+-- b-z
+
+----------------
+Glove Components
+----------------
+
+- MPU-6050 3-Axis Gyroscope + 3-Axis Accelerometer 6-DOF Module
+- Bluno
