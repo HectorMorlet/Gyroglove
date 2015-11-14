@@ -53,7 +53,7 @@
 - (void)didDiscoverDevice:(DFBlunoDevice *)dev {
     NSLog(@"Trying to connect");
     NSLog(@"I found: %@", dev.identifier);
-    if ([dev.identifier isEqualToString:@"ED6868E1-25A8-91B5-738C-DE112C8EFAA1"]) {
+    if ([dev.identifier isEqualToString:@"BC072AB6-F061-37D1-2802-D547A9CCAFF1"]) {
         NSLog(@"Found target");
         [self.bluetoothDevice connectToDevice:dev];
     }
@@ -152,11 +152,8 @@
             y = -100.0;
         }
         
-        self.titleScene.gyrogloveTilt = CGPointMake(y * -2, (x * -2));
-        NSLog(@"Converted data: %f, %f", self.titleScene.gyrogloveTilt.x, self.titleScene.gyrogloveTilt.y);
-    } else {
-        NSLog(@"Could not parse data: %@", receivedData);
-    }
+        self.titleScene.gyrogloveTilt = CGPointMake(x * -2, (y * -2));
+    }\
 }
 
 - (void)bleDidUpdateState:(BOOL)bleSupported {
@@ -183,19 +180,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex >= 0 && [[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Retry"]) {
-        
-        self.shownAlert = [[UIAlertView alloc] initWithTitle:@"Initialising Bluetooth"
-                                                     message:@"One moment..."
-                                                    delegate:self
-                                           cancelButtonTitle:nil
-                                           otherButtonTitles:nil];
-        [self.shownAlert show];
-        
-        self.bluetoothDevice = nil;
-        self.bluetoothDevice = [DFBlunoManager sharedInstance];
-        self.bluetoothDevice.delegate = self;
-    }
+
 }
 
 
