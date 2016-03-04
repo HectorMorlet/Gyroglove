@@ -2,7 +2,7 @@
 //
 // Gyroscope bluetooth communication for Gyroflyer
 // Hector Morlet
-// Last revision /10/2014
+// Last revision September 2015
 //
 
 
@@ -21,7 +21,7 @@ bool dmpReady = false;
 uint8_t mpuIntStatus;
 uint8_t doProceed;
 
-// Wire 
+// Wire
 uint16_t packetSize;    // expected DMP packet size (default is 42 bytes)
 uint16_t fifoCount;     // count of all bytes currently in fifo
 uint8_t fifoBuffer[64]; // fifo storage buffer
@@ -70,7 +70,7 @@ void setup() {
     mpu.setXGyroOffset(220);
     mpu.setYGyroOffset(76);
     mpu.setZGyroOffset(-85);
-    mpu.setZAccelOffset(1788);
+    mpu.setZAccelOffset(1733);
 
     // Procceeding if this worked
     if (doProceed == 0) {
@@ -89,7 +89,7 @@ void setup() {
     } else {
         // Error
         Serial.print(F("DMP Initialization failed (code "));
-        
+
         // 1 = initial memory load failed
         // 2 = DMP configuration updates failed
         Serial.print(doProceed);
@@ -115,70 +115,42 @@ struct XYZ {
 XYZ coordinateBuffer[20];
 
 void loop() {
-    while (1) {
-
       // Resetting and getting interrupt status
       mpuInterrupt = false;
       mpuIntStatus = mpu.getIntStatus();
-  
+
       // Getting current fifo count
       fifoCount = mpu.getFIFOCount();
-      
-      if (!isPrimed) {
-        Serial.write(' ');
-      }
-  
+
       // Check for overflow - only if code is ineficient
       if ((mpuIntStatus & 0x10) || fifoCount == 1024) {
           // Reset to recover
-          Serial.println("FIFO FULL!");
-          mpu.resetFIFO();
-  //        Serial.println(F("fifo overflow!"));
+            mpu.resetFIFO();
       } else if (mpuIntStatus & 0x02) {
-          // Getting the fifo count
-          Serial.println("GETTTING FIFO");
-          while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
-          
-          Serial.println("GET FIFBYTES");
           // Reading a packet from fifo
           mpu.getFIFOBytes(fifoBuffer, packetSize);
-          
+
           // Adjusting fifo count for previous editions
           fifoCount -= packetSize;
-  
+
           // Getting raw angles
-          Serial.println("QURT");
           mpu.dmpGetQuaternion(&q, fifoBuffer);
-          Serial.println("GRAVITYSCROORE");
           mpu.dmpGetGravity(&gravity, &q);
-          Serial.println("PITCH");
           mpu.dmpGetYawPitchRoll(angles, &q, &gravity);
-          Serial.println("ANGLES");
-          
-          // Creating Eulor angles
-          int x = int(angles[1] * 180/M_PI);
-          int z = int(angles[0] * 180/M_PI);
-          int y = int(angles[2] * 180/M_PI);
-          
-          XYZ addingCoords = {x, y, z};
-          
-          activeBufferLength++;
-          coordinateBuffer[activeBufferLength] = addingCoords;
-          
-      }
-      
-      if (activeBufferLength > 10) {
-          XYZ coords = coordinateBuffer[activeBufferLength];
-          String dataToBeSent = (String(coords.x) + " " + String(coords.y) + " " + String(coords.z));
-          
+
+          // Creating Euler angles
+          float x = float(angles[1] * 180/M_PI);
+          float z = float(angles[0] * 180/M_PI);
+          float y = float(angles[2] * 180/M_PI);
+
+          String dataToBeSent = (String(x) + " " + String(y) + " " + String(z));
+
           for (int i = 0; i < dataToBeSent.length(); i++) {
             Serial.write(dataToBeSent[i]);
           }
-          Serial.println(); 
-          
-          isPrimed = 1;
-          
-          activeBufferLength = 0;
+          Serial.println();
+
+          mpu.resetFIFO();
+          delay(100);
       }
-}
 }
